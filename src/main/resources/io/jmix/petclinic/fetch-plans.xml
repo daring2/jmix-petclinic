@@ -1,3 +1,6 @@
 <fetchPlans xmlns="http://jmix.io/schema/core/fetch-plans">
-
+    <fetchPlan entity="petclinic_Pet" name="browse" extends="_base">
+        <property name="type" fetchPlan="_instance_name"/>
+        <property name="owner" fetchPlan="_instance_name"/>
+    </fetchPlan>
 </fetchPlans>
