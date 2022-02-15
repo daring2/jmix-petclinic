@@ -16,10 +16,9 @@ sourceCompatibility = JavaVersion.VERSION_11
 targetCompatibility = JavaVersion.VERSION_11
 
 repositories {
+    mavenLocal()
     mavenCentral()
-    maven {
-        url 'https://global.repo.jmix.io/repository/public'
-    }
+    maven { url 'https://global.repo.jmix.io/repository/public' }
 }
 
 dependencies {
@@ -37,6 +36,7 @@ dependencies {
     implementation("io.jmix.security:jmix-security-oauth2-starter")
     implementation("io.jmix.dynattr:jmix-dynattr-starter")
     implementation("io.jmix.dynattr:jmix-dynattr-ui-starter")
+    implementation("com.company:jmix-kotlin-addon-starter:0.1")
 
     implementation 'org.springframework.boot:spring-boot-starter-web'
 
