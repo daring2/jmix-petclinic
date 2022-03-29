@@ -1,5 +1,7 @@
 package io.jmix.petclinic.entity.pet;
 
+import io.jmix.core.DeletePolicy;
+import io.jmix.core.entity.annotation.OnDeleteInverse;
 import io.jmix.core.metamodel.annotation.JmixEntity;
 import io.jmix.petclinic.entity.NamedEntity;
 import io.jmix.petclinic.entity.owner.Owner;
@@ -25,6 +27,7 @@ public class Pet extends NamedEntity {
     @Column(name = "BIRTHDATE")
     private LocalDate birthdate;
 
+    @OnDeleteInverse(DeletePolicy.DENY)
     @JoinColumn(name = "TYPE_ID")
     @ManyToOne(fetch = FetchType.LAZY)
     private PetType type;
