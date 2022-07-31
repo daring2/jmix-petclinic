@@ -65,6 +65,7 @@
         <hbox id="editActions" spacing="true">
             <button id="commitAndCloseBtn" action="windowCommitAndClose"/>
             <button id="closeBtn" action="windowClose"/>
+            <button id="enableEditingBtn" action="enableEditing"/>
         </hbox>
     </layout>
 </window>

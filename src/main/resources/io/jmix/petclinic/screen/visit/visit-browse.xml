@@ -164,6 +164,7 @@
                                 <property name="openMode" value="DIALOG"/>
                             </properties>
                         </action>
+                        <action id="view" type="view"/>
                         <action id="remove" type="remove"/>
                     </actions>
                     <columns>
@@ -180,6 +181,7 @@
                                   alwaysVisible="true">
                         <button id="createBtn" action="visitsTable.create"/>
                         <button id="editBtn" action="visitsTable.edit"/>
+                        <button id="viewBtn" action="visitsTable.view"/>
                         <button id="removeBtn" action="visitsTable.remove" stylename="danger"/>
                     </buttonsPanel>
                 </groupTable>
