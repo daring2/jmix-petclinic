@@ -2,7 +2,9 @@ package io.jmix.petclinic.entity.pet;
 
 import io.jmix.core.DeletePolicy;
 import io.jmix.core.entity.annotation.OnDeleteInverse;
+import io.jmix.core.metamodel.annotation.DependsOnProperties;
 import io.jmix.core.metamodel.annotation.JmixEntity;
+import io.jmix.core.metamodel.annotation.JmixProperty;
 import io.jmix.petclinic.entity.NamedEntity;
 import io.jmix.petclinic.entity.owner.Owner;
 
@@ -36,6 +38,10 @@ public class Pet extends NamedEntity {
     @ManyToOne(fetch = FetchType.LAZY)
     private Owner owner;
 
+    @JoinColumn(name = "PARENT_ID")
+    @ManyToOne(fetch = FetchType.LAZY)
+    private Pet parent;
+
     public LocalDate getBirthdate() {
         return birthdate;
     }
@@ -67,4 +73,19 @@ public class Pet extends NamedEntity {
     public void setIdentificationNumber(String identificationNumber) {
         this.identificationNumber = identificationNumber;
     }
+
+    public Pet getParent() {
+        return parent;
+    }
+
+    public void setParent(Pet parent) {
+        this.parent = parent;
+    }
+
+    @JmixProperty
+    @DependsOnProperties("parent")
+    public Pet getParent2() {
+        return getParent();
+    }
+
 }

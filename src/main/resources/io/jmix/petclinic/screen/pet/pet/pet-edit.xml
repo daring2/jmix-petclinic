@@ -9,6 +9,9 @@
             <fetchPlan extends="_base">
                 <property name="type" fetchPlan="_base"/>
                 <property name="owner" fetchPlan="_base"/>
+                <property name="parent" fetchPlan="_instance_name">
+                    <property name="parent" fetchPlan="_instance_name"/>
+                </property>
             </fetchPlan>
             <loader/>
         </instance>
@@ -71,11 +74,13 @@
                             <action id="clear" type="entity_clear"/>
                         </actions>
                     </entityComboBox>
+                    <entityPicker id="parentField" property="parent"/>
                 </column>
-                            <column width="250px">
+                <column width="250px">
                     <textField id="identificationNumberField" property="identificationNumber"/>
                     <dateField id="birthdateField" property="birthdate"/>
-            </column>
+                    <entityPicker id="parent2Field" property="parent2"/>
+                </column>
             </form>
         </scrollBox>
         <hbox id="editActions" spacing="true">
