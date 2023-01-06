@@ -67,6 +67,11 @@
                 </hbox>
             </vbox>
             <vbox id="editBox" height="100%" margin="false,false,false,true" expand="fieldGroupBox" spacing="true">
+                <treeDataGrid id="treeGrid" dataContainer="specialtiesDc" hierarchyProperty="parent">
+                    <columns>
+                        <column property="name"/>
+                    </columns>
+                </treeDataGrid>
                 <scrollBox id="fieldGroupBox">
                     <form id="form" dataContainer="specialtyDc">
                         <column width="350px">
