@@ -43,7 +43,7 @@ dependencies {
     implementation 'io.jmix.translations:jmix-translations-de'
     implementation 'io.jmix.translations:jmix-translations-zh-cn'
     implementation 'io.jmix.translations:jmix-translations-ru'
-//    implementation 'io.github.it-syn:jmix-menu-editor-starter:0.8.5'
+    implementation 'io.github.it-syn:jmix-menu-editor-starter:0.8.5'
 
     themes 'io.jmix.ui:jmix-ui-themes'
 
